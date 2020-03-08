@@ -37,7 +37,6 @@ namespace LinkedList
             }
 
             count++;
-
         } // addLast method
 
         public void addFirst(int item)
@@ -53,13 +52,11 @@ namespace LinkedList
             }
 
             count++;
-
         } // addFirst method
 
         private bool isEmpty()
         {
             return first == null;
-
         } // isEmpty method
 
         public int indexOf(int item)
@@ -73,13 +70,11 @@ namespace LinkedList
                 index++;
             }
             return -1;
-
         } // indexOf method
 
         public bool contains(int item)
         {
             return indexOf(item) != 1;
-
         } // contains method
 
         public void removeFirst()
@@ -97,7 +92,6 @@ namespace LinkedList
             }
 
             count--;
-
         } // removeFirst method
 
         public void removeLast()
@@ -115,7 +109,6 @@ namespace LinkedList
             }
 
             count--;
-
         } // removeLast method
 
         private Node getPrevious(Node node)
@@ -127,13 +120,11 @@ namespace LinkedList
                 current = current.next;
             }
             return null;
-
         } // getPrevious method
 
         public int size()
         {
             return count;
-
         } // size method
 
         public int[] toArray()
@@ -148,7 +139,6 @@ namespace LinkedList
             }
 
             return array;
-
         } // toArray method
 
         public void reverse()
@@ -166,7 +156,6 @@ namespace LinkedList
             last = first;
             last.next = null;
             first = previous;
-
         } // reverse method
 
         public int getKthFromTheEnd(int k)
@@ -188,8 +177,7 @@ namespace LinkedList
                 b = b.next;
             }
             return a.value;
-
-        } // getKthFromTheEnd
+        } // getKthFromTheEnd method
 
         public void printList()
         {
@@ -213,7 +201,6 @@ namespace LinkedList
             }
             Console.Write("}");
             Console.WriteLine();
-
         } // printList method
 
 
@@ -257,7 +244,6 @@ namespace LinkedList
                     return true;
             }
             return false;
-        
         } // hasLoop method
 
         public static LinkedList createWithLoop()
@@ -277,7 +263,6 @@ namespace LinkedList
             list.last.next = node;
 
             return list;
-        
         } // createWithLoop method
 
     } // LinkedList class
