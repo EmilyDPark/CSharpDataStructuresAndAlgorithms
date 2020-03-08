@@ -37,7 +37,7 @@ namespace LinkedList
             }
 
             count++;
-        } // addLast method
+        } // AddLast method
 
         public void AddFirst(int item)
         {
@@ -52,12 +52,12 @@ namespace LinkedList
             }
 
             count++;
-        } // addFirst method
+        } // AddFirst method
 
         private bool IsEmpty()
         {
             return first == null;
-        } // isEmpty method
+        } // IsEmpty method
 
         public int IndexOf(int item)
         {
@@ -70,12 +70,12 @@ namespace LinkedList
                 index++;
             }
             return -1;
-        } // indexOf method
+        } // IndexOf method
 
         public bool Contains(int item)
         {
             return IndexOf(item) != 1;
-        } // contains method
+        } // Contains method
 
         public void RemoveFirst()
         {
@@ -92,7 +92,7 @@ namespace LinkedList
             }
 
             count--;
-        } // removeFirst method
+        } // RemoveFirst method
 
         public void RemoveLast()
         {
@@ -109,7 +109,7 @@ namespace LinkedList
             }
 
             count--;
-        } // removeLast method
+        } // RemoveLast method
 
         private Node GetPrevious(Node node)
         {
@@ -120,12 +120,12 @@ namespace LinkedList
                 current = current.next;
             }
             return null;
-        } // getPrevious method
+        } // GetPrevious method
 
         public int Size()
         {
             return count;
-        } // size method
+        } // Size method
 
         public int[] ToArray()
         {
@@ -139,7 +139,7 @@ namespace LinkedList
             }
 
             return array;
-        } // toArray method
+        } // ToArray method
 
         public void Reverse()
         {
@@ -156,7 +156,7 @@ namespace LinkedList
             last = first;
             last.next = null;
             first = previous;
-        } // reverse method
+        } // Reverse method
 
         public int GetKthFromTheEnd(int k)
         {
@@ -177,7 +177,7 @@ namespace LinkedList
                 b = b.next;
             }
             return a.value;
-        } // getKthFromTheEnd method
+        } // GetKthFromTheEnd method
 
         public void PrintList()
         {
@@ -201,7 +201,7 @@ namespace LinkedList
             }
             Console.Write("}");
             Console.WriteLine();
-        } // printList method
+        } // PrintList method
 
 
         // ---------------------------------------- Exercises ----------------------------------------
@@ -227,7 +227,7 @@ namespace LinkedList
             else
                 Console.WriteLine(a.value + ", " + a.next.value);
 
-        } // printMiddle method
+        } // PrintMiddle method
 
         // 2 - Check to see if a linked list has a loop
         public bool HasLoop()
@@ -244,7 +244,7 @@ namespace LinkedList
                     return true;
             }
             return false;
-        } // hasLoop method
+        } // HasLoop method
 
         public static LinkedList CreateWithLoop()
         {
@@ -263,7 +263,7 @@ namespace LinkedList
             list.last.next = node;
 
             return list;
-        } // createWithLoop method
+        } // CreateWithLoop method
 
     } // LinkedList class
 
