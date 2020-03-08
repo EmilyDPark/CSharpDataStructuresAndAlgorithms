@@ -16,7 +16,7 @@ namespace Arrays
             items = new int[length];
         }
 
-        public void insert(int item)
+        public void Insert(int item)
         {
             // If the array is full, resize it
             if (items.Length == count)
@@ -36,7 +36,7 @@ namespace Arrays
             items[count++] = item;
         } // insert method
 
-        public void removeAt(int index)
+        public void RemoveAt(int index)
         {
             // Validate the index
             if (index < 0 || index >= count)
@@ -49,7 +49,7 @@ namespace Arrays
             count--;
         } // removeAt method
 
-        public int indexOf(int item)
+        public int IndexOf(int item)
         {
             // If we find it, return index
             for (int i = 0; i < count; i++)
@@ -60,13 +60,13 @@ namespace Arrays
             return -1;
         } // indexOf method
 
-        public void print()
+        public void Print()
         {
             for (int i = 0; i < count; i++)
                 Console.WriteLine(items[i]);
         } // print method
 
-        public void printArray()
+        public void PrintArray()
         {
             if (count == 0)
             {
@@ -85,7 +85,7 @@ namespace Arrays
         // ---------------------------------------- Exercises ----------------------------------------
 
         // 1 - Extend the Array class and add a new method to return the largest number.
-        public int max()
+        public int Max()
         {
             int max = 0;
             for (int i = 1; i < count; i++)
@@ -96,7 +96,7 @@ namespace Arrays
         } // max method
 
         // 2 - Extend the Array class and add a method to return the common items in this array and another array.
-        public Array intersect(Array otherArr)
+        public Array Intersect(Array otherArr)
         {
             Array common = new Array(1);
             for (int i = 0; i < this.count - 1; i++)
@@ -105,16 +105,27 @@ namespace Arrays
                 {
                     if (items[i] == otherArr.items[j])
                     {
-                        common.insert(items[i]);
+                        common.Insert(items[i]);
                     }
                 }
             }
             return common;
         } // intersect method
 
+        public Array Intersect2(Array other)
+        {
+            Array intersection = new Array(count);
+
+            foreach (int item in items)
+                if (other.IndexOf(item) >= 0)
+                    intersection.Insert(item);
+
+            return intersection;
+        } // intersect2 method
+
         // 3 - Extend the Array class and add a method to reverse the array.
         //     For example, if the array includes [1, 2, 3, 4], after reversing and printing it, we should see [4, 3, 2, 1].
-        public void reverse()
+        public void Reverse()
         {
             var temp = 0;
             for (int i = 0; i < count / 2; i++)
@@ -126,7 +137,7 @@ namespace Arrays
         } // reverse method
 
         // 4 - Extend the Array class and add a new method to insert an item at given index.
-        public void insertAt(int item, int index)
+        public void InsertAt(int item, int index)
         {
             // Validate the index
             if (index < 0 || index > count)
