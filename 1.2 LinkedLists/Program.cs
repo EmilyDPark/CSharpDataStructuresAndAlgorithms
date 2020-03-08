@@ -14,53 +14,53 @@ namespace LinkedList
             var list = new LinkedList();
 
             // addFirst method
-            list.addFirst(20);
-            list.addFirst(10);
-            list.printList();
+            list.AddFirst(20);
+            list.AddFirst(10);
+            list.PrintList();
 
             // addLast method
-            list.addLast(30);
-            list.addLast(40);
-            list.addLast(50);
-            list.printList();
+            list.AddLast(30);
+            list.AddLast(40);
+            list.AddLast(50);
+            list.PrintList();
 
             // indexOf method
-            Console.WriteLine(list.indexOf(30));
+            Console.WriteLine(list.IndexOf(30));
 
             // contains method
-            Console.WriteLine(list.contains(40));
+            Console.WriteLine(list.Contains(40));
 
             // removeFirst method
-            list.removeFirst();
-            list.printList();
+            list.RemoveFirst();
+            list.PrintList();
 
             // removeLast method
-            list.removeLast();
-            list.printList();
+            list.RemoveLast();
+            list.PrintList();
 
             // size method
-            Console.WriteLine(list.size());
+            Console.WriteLine(list.Size());
 
             // toArray method;
-            var array = list.toArray();
+            var array = list.ToArray();
             Console.WriteLine($"[{string.Join(", ", array)}]");
 
             // reverse method
-            list.reverse();
-            list.printList();
+            list.Reverse();
+            list.PrintList();
 
             // getKthFromTheEnd method
-            Console.WriteLine(list.getKthFromTheEnd(1));
+            Console.WriteLine(list.GetKthFromTheEnd(1));
 
 
             // ---------------------------------------- Exercises ----------------------------------------
 
             // printMiddle method
-            list.printMiddle();
+            list.PrintMiddle();
 
             // hasLoop method
-            var list2 = LinkedList.createWithLoop();
-            Console.WriteLine(list2.hasLoop());
+            var list2 = LinkedList.CreateWithLoop();
+            Console.WriteLine(list2.HasLoop());
 
         }  // Main method
 
