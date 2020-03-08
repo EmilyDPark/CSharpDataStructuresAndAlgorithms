@@ -34,7 +34,7 @@ namespace Arrays
 
             // Add the new item at the end
             items[count++] = item;
-        } // insert method
+        } // Insert method
 
         public void RemoveAt(int index)
         {
@@ -47,7 +47,7 @@ namespace Arrays
                 items[i] = items[i + 1];
 
             count--;
-        } // removeAt method
+        } // RemoveAt method
 
         public int IndexOf(int item)
         {
@@ -58,13 +58,13 @@ namespace Arrays
 
             // Otherwise, return -1
             return -1;
-        } // indexOf method
+        } // IndexOf method
 
         public void Print()
         {
             for (int i = 0; i < count; i++)
                 Console.WriteLine(items[i]);
-        } // print method
+        } // Print method
 
         public void PrintArray()
         {
@@ -79,7 +79,7 @@ namespace Arrays
                 Console.Write(items[i] + ", ");
             Console.Write(items[count - 1] + "]");
             Console.WriteLine();
-        } // printArray method
+        } // PrintArray method
 
 
         // ---------------------------------------- Exercises ----------------------------------------
@@ -93,7 +93,7 @@ namespace Arrays
                     max = i;
 
             return max;
-        } // max method
+        } // Max method
 
         // 2 - Extend the Array class and add a method to return the common items in this array and another array.
         public Array Intersect(Array otherArr)
@@ -110,7 +110,7 @@ namespace Arrays
                 }
             }
             return common;
-        } // intersect method
+        } // Intersect method
 
         public Array Intersect2(Array other)
         {
@@ -121,7 +121,7 @@ namespace Arrays
                     intersection.Insert(item);
 
             return intersection;
-        } // intersect2 method
+        } // Intersect2 method
 
         // 3 - Extend the Array class and add a method to reverse the array.
         //     For example, if the array includes [1, 2, 3, 4], after reversing and printing it, we should see [4, 3, 2, 1].
@@ -134,7 +134,7 @@ namespace Arrays
                 items[i] = items[count - 1 - i];
                 items[count - 1 - i] = temp;
             }
-        } // reverse method
+        } // Reverse method
 
         // 4 - Extend the Array class and add a new method to insert an item at given index.
         public void InsertAt(int item, int index)
@@ -169,7 +169,7 @@ namespace Arrays
             }
 
             count++;
-        } // insertAt method
+        } // InsertAt method
 
     } // Array class
 
