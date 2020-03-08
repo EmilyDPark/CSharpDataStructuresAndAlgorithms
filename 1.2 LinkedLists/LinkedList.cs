@@ -24,11 +24,11 @@ namespace LinkedList
         private Node last;
         private int count;
 
-        public void addLast(int item)
+        public void AddLast(int item)
         {
             var node = new Node(item);
 
-            if (isEmpty())
+            if (IsEmpty())
                 first = last = node;
             else
             {
@@ -39,11 +39,11 @@ namespace LinkedList
             count++;
         } // addLast method
 
-        public void addFirst(int item)
+        public void AddFirst(int item)
         {
             var node = new Node(item);
 
-            if (isEmpty())
+            if (IsEmpty())
                 first = last = node;
             else
             {
@@ -54,12 +54,12 @@ namespace LinkedList
             count++;
         } // addFirst method
 
-        private bool isEmpty()
+        private bool IsEmpty()
         {
             return first == null;
         } // isEmpty method
 
-        public int indexOf(int item)
+        public int IndexOf(int item)
         {
             int index = 0;
             var current = first;
@@ -72,14 +72,14 @@ namespace LinkedList
             return -1;
         } // indexOf method
 
-        public bool contains(int item)
+        public bool Contains(int item)
         {
-            return indexOf(item) != 1;
+            return IndexOf(item) != 1;
         } // contains method
 
-        public void removeFirst()
+        public void RemoveFirst()
         {
-            if (isEmpty())
+            if (IsEmpty())
                 throw new InvalidOperationException();
 
             if (first == last)
@@ -94,16 +94,16 @@ namespace LinkedList
             count--;
         } // removeFirst method
 
-        public void removeLast()
+        public void RemoveLast()
         {
-            if (isEmpty())
+            if (IsEmpty())
                 throw new InvalidOperationException();
 
             if (first == last)
                 first = last = null;
             else
             {
-                var previous = getPrevious(last);
+                var previous = GetPrevious(last);
                 last = previous;
                 last.next = null;
             }
@@ -111,7 +111,7 @@ namespace LinkedList
             count--;
         } // removeLast method
 
-        private Node getPrevious(Node node)
+        private Node GetPrevious(Node node)
         {
             var current = first;
             while (current != null)
@@ -122,12 +122,12 @@ namespace LinkedList
             return null;
         } // getPrevious method
 
-        public int size()
+        public int Size()
         {
             return count;
         } // size method
 
-        public int[] toArray()
+        public int[] ToArray()
         {
             int[] array = new int[count];
             var current = first;
@@ -141,7 +141,7 @@ namespace LinkedList
             return array;
         } // toArray method
 
-        public void reverse()
+        public void Reverse()
         {
             var previous = first;
             var current = first.next;
@@ -158,9 +158,9 @@ namespace LinkedList
             first = previous;
         } // reverse method
 
-        public int getKthFromTheEnd(int k)
+        public int GetKthFromTheEnd(int k)
         {
-            if (isEmpty())
+            if (IsEmpty())
                 throw new InvalidOperationException();
 
             var a = first;
@@ -179,12 +179,12 @@ namespace LinkedList
             return a.value;
         } // getKthFromTheEnd method
 
-        public void printList()
+        public void PrintList()
         {
-            if (isEmpty()) return;
+            if (IsEmpty()) return;
 
             var current = first;
-            if (isEmpty())
+            if (IsEmpty())
             {
                 Console.WriteLine("List is empty.");
                 return;
@@ -209,9 +209,9 @@ namespace LinkedList
         // 1 - Find the middle of a linked list in one pass.
         //     If the list has an even number of nodes, there would be two middle nodes.
         //     (Note: Assume that you don’t know the size of the list ahead of time.)
-        public void printMiddle()
+        public void PrintMiddle()
         {
-            if (isEmpty())
+            if (IsEmpty())
                 throw new InvalidOperationException();
 
             var a = first;
@@ -230,7 +230,7 @@ namespace LinkedList
         } // printMiddle method
 
         // 2 - Check to see if a linked list has a loop
-        public bool hasLoop()
+        public bool HasLoop()
         {
             var slow = first;
             var fast = first;
@@ -246,18 +246,18 @@ namespace LinkedList
             return false;
         } // hasLoop method
 
-        public static LinkedList createWithLoop()
+        public static LinkedList CreateWithLoop()
         {
             var list = new LinkedList();
-            list.addLast(10);
-            list.addLast(20);
-            list.addLast(30);
+            list.AddLast(10);
+            list.AddLast(20);
+            list.AddLast(30);
 
             // Get a reference to 30
             var node = list.last;
 
-            list.addLast(40);
-            list.addLast(50);
+            list.AddLast(40);
+            list.AddLast(50);
 
             // Create the loop
             list.last.next = node;
