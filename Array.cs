@@ -34,7 +34,6 @@ namespace Arrays
 
             // Add the new item at the end
             items[count++] = item;
-
         } // insert method
 
         public void removeAt(int index)
@@ -48,7 +47,6 @@ namespace Arrays
                 items[i] = items[i + 1];
 
             count--;
-
         } // removeAt method
 
         public int indexOf(int item)
@@ -60,14 +58,12 @@ namespace Arrays
 
             // Otherwise, return -1
             return -1;
-
         } // indexOf method
 
         public void print()
         {
             for (int i = 0; i < count; i++)
                 Console.WriteLine(items[i]);
-
         } // print method
 
         public void printArray()
@@ -83,7 +79,6 @@ namespace Arrays
                 Console.Write(items[i] + ", ");
             Console.Write(items[count - 1] + "]");
             Console.WriteLine();
-
         } // printArray method
 
 
@@ -98,7 +93,6 @@ namespace Arrays
                     max = i;
 
             return max;
-
         } // max method
 
         // 2 - Extend the Array class and add a method to return the common items in this array and another array.
@@ -116,7 +110,6 @@ namespace Arrays
                 }
             }
             return common;
-
         } // intersect method
 
         // 3 - Extend the Array class and add a method to reverse the array.
@@ -130,7 +123,6 @@ namespace Arrays
                 items[i] = items[count - 1 - i];
                 items[count - 1 - i] = temp;
             }
-
         } // reverse method
 
         // 4 - Extend the Array class and add a new method to insert an item at given index.
@@ -166,8 +158,8 @@ namespace Arrays
             }
 
             count++;
-
         } // insertAt method
 
     } // Array class
-}
+
+} // Arrays namespace
