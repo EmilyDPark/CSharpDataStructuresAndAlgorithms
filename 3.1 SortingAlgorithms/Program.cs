@@ -14,15 +14,6 @@ namespace SortingAlgorithms
             var bubbleNumbers = new[] { 7, 3, 1, 4, 6, 2, 3 };
             var bubbleSorter = new BubbleSort();
             bubbleSorter.Sort(bubbleNumbers);
-
-            // Old way to print an array
-            //foreach (var i in bubbleNumbers)
-            //    Console.WriteLine(i); // 1 2 3 3 4 6 7
-
-            // New way to print an array
-            //Array.ForEach(bubbleNumbers, Console.WriteLine); // 1 2 3 3 4 6 7
-
-            // Print an array like Java
             Console.WriteLine($"[{string.Join(", ", bubbleNumbers)}]");
 
             // -------------------- Selection Sort --------------------
@@ -54,6 +45,12 @@ namespace SortingAlgorithms
             var countingSorter = new CountingSort();
             countingSorter.Sort(countingNumbers);
             Console.WriteLine("[{0}]", string.Join(", ", countingNumbers));
+
+            // -------------------- Bucket Sort --------------------
+            int[] bucketNumbers = { 7, 3, 1, 4, 6, 2, 3 };
+            var bucketSorter = new BucketSort();
+            bucketSorter.Sort(bucketNumbers, 3);
+            Console.WriteLine("[{0}]", string.Join(", ", bucketNumbers));
         }
     }
 }
