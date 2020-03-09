@@ -23,7 +23,7 @@ namespace SortingAlgorithms
             //Array.ForEach(bubbleNumbers, Console.WriteLine); // 1 2 3 3 4 6 7
 
             // Print an array like Java
-            Console.WriteLine($"[{string.Join(", ", bubbleNumbers)}]"); // [1, 2, 3, 3, 4, 6, 7]
+            Console.WriteLine($"[{string.Join(", ", bubbleNumbers)}]");
 
             // -------------------- Selection Sort --------------------
             var selectionNumbers = new[] { 7, 3, 1, 4, 6, 2, 3 };
@@ -41,7 +41,13 @@ namespace SortingAlgorithms
             int[] mergeNumbers = { 7, 3, 1, 4, 6, 2, 3 };
             var mergeSorter = new MergeSort();
             mergeSorter.Sort(mergeNumbers);
-            Console.WriteLine("[{0}]", string.Join(", ", mergeNumbers)); // [1, 2, 3, 3, 4, 6, 7]
+            Console.WriteLine("[{0}]", string.Join(", ", mergeNumbers));
+
+            // -------------------- Quick Sort --------------------
+            int[] quickNumbers = { 7, 3, 1, 4, 6, 2, 3 };
+            var quickSorter = new QuickSort();
+            quickSorter.Sort(quickNumbers);
+            Console.WriteLine("[{0}]", string.Join(", ", quickNumbers));
         }
     }
 }
