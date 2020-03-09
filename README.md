@@ -24,6 +24,6 @@
 
 ### Part 3
 -------------------------------
-- [ ] Sorting Algorithms
+- [X] Sorting Algorithms
 - [ ] Searching Algorithms
 - [ ] String Manipulation Algorithms
