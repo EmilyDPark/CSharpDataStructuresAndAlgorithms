@@ -48,6 +48,12 @@ namespace SortingAlgorithms
             var quickSorter = new QuickSort();
             quickSorter.Sort(quickNumbers);
             Console.WriteLine("[{0}]", string.Join(", ", quickNumbers));
+
+            // -------------------- Counting Sort --------------------
+            int[] countingNumbers = { 7, 3, 1, 4, 6, 2, 3 };
+            var countingSorter = new CountingSort();
+            countingSorter.Sort(countingNumbers);
+            Console.WriteLine("[{0}]", string.Join(", ", countingNumbers));
         }
     }
 }
