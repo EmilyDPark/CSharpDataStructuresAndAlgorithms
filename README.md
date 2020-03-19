@@ -7,8 +7,8 @@
 -------------------------------
 - [X] Arrays
 - [X] Linked Lists
-- [ ] Stacks
-- [ ] Queues
+- [X] Stacks
+- [X] Queues
 - [ ] Hash Tables
 
 
